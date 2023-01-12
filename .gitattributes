@@ -1,2 +1,154 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+// AI code 
+  function crazyCaps(originalString) {
+    let modifiedString = "";
+    for (let i = 0; i < originalString.length; i++) {
+        if (i % 2 === 0) {
+            modifiedString += originalString[i].toLowerCase();
+        } else {
+            modifiedString += originalString[i].toUpperCase();
+        }
+    }
+    return modifiedString;
+}
+console.log(modifiedString('compliance'));
+console.log(modifiedString('entrepreneurship');
+
+// my code 
+
+function crazyCaps(originalString){
+    let crazyCaps = '';
+    for (let i = 0; i < originalString.length; i++) {
+  
+        let char = originalString[i]; 
+        
+        if (i % 2 === 0) {
+           
+            crazyCaps += char;
+			
+          } else {
+           
+            crazyCaps += char.toUpperCase();
+          }        
+      }
+
+
+
+    return crazyCaps;
+}
+console.log(crazyCaps('pratically'));
+console.log(crazyCaps('Anticonstitutionally'));
+
+// new exercise 
+
+function letterAfter(haystack, needle, limit){
+    let letters = ''
+    for(let i = 0; i < haystack.length; i++);{
+        let char = haystack[i];
+        if(char === needle){
+            for(let j = 0; j < limit; j++);{
+               let innerChar = haystack[i + j + 1];
+                letters += innerChar;
+
+            }
+            return letters;
+            
+        }
+        
+
+    }
+    
+}
+console.log(letterAfter('mamamia is crazy'));
+
+
+// Do not edit below
+
+module.exports = letterAfter;
+
+					// Make grid exercise//
+
+// YOUR CODE
+function makeGrid(numColumns, numRows) {
+    let grid = [];
+    let count = 1;
+    for (let row = 0; row < numRows; row++) {
+        let currentRow = [];
+        for (let col = 0; col < numColumns; col++) {
+            currentRow.push(count++);
+        }
+        grid.push(currentRow);
+    }
+    return grid;
+}
+console.log(makeGrid(3,3));
+									 /// Array flattener//
+
+function arrayFlattener(arr) {
+    return arr.reduce((acc, val) => acc.concat(val), []);
+}
+console.log(arrayFlattener([1,[2, 3], 4]));
+
+                     /////Array Flattener///
+function arrayFlattener(arr) {
+    let flattenedArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            for (let j = 0; j < arr[i].length; j++) {
+                flattenedArray.push(arr[i][j]);
+            }
+        } else {
+            flattenedArray.push(arr[i]);
+        }
+    }
+    return flattenedArray;
+}
+console.log(arrayFlattener([1,[2,4],5]));
+
+
+	 /////// My Zoo ////
+	 
+	 
+function zooInventory(animals) {
+    let flatArray = [];
+    for (let i = 0; i < animals.length; i++) {
+        let animal = animals[i];
+        let name = animal[0];
+        let type = animal[1][0];
+        let age = animal[1][1];
+        flatArray.push(`${name} the ${type} is ${age}.`);
+    }
+    return flatArray;
+}
+let myZoo = [
+  ['King Kong', ['gorilla', 42]],
+  ['Nemo', ['fish', 5]],
+  ['Punxsutawney Phil', ['groundhog', 11]]
+];
+
+console.log(zooInventory(myZoo));
+
+
+////////// New Grid /////////
+
+
+// YOUR CODE
+function removeColumns(originalGrid, numColums) {
+    let newGrid = originalGrid.map(row => [...row]); 
+    for (let i = 0; i < numColums; i++) {
+        for (let j = 0; j < newGrid.length; j++) {
+            newGrid[j].pop();
+        }
+    }
+    return newGrid;
+}
+removeColumns([[1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3]], 2);
+			   
+			   /* => [[1],
+       [1],
+       [1],
+       [1]]
+*/
